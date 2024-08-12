@@ -10,7 +10,7 @@
     ./lsp/ionide.nix
     ./lsp/none-ls.nix
     ./lsp/trouble.nix
-    ./nvim-tree.nix
+    ./neo-tree.nix
     ./options.nix
     ./treesitter
     ./utils/auto-pairs.nix
