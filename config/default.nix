@@ -20,6 +20,7 @@
     ./utils/toggleterm.nix
     ./utils/which-key.nix
     ./utils/wilder.nix
+    ./utils/dashboard.nix
   ];
 
   colorschemes.dracula.enable = true;
@@ -91,12 +92,6 @@
       options.desc = "Add tests for my code";
     }
 
-    # File
-    {
-      mode = "n";
-      key = "<leader>f";
-      action = "+find/file";
-    }
     {
       # Format file
       key = "<leader>fm";
