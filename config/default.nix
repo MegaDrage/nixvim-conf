@@ -32,13 +32,20 @@
 
   globals.mapleader = " ";
   keymaps = [
-    # Global
-    # Default mode is "" which means normal-visual-op
+    # Neotree
     {
-      key = "<C-n>";
-      action = "<CMD>NvimTreeToggle<CR>";
-      options.desc = "Toggle NvimTree";
+      mode = "n";
+      key = "<leader>e";
+      action = "<CMD>Neotree float focus<CR>";
+      options.desc = "Toggle Neotree float";
     }
+    {
+      mode = "n";
+      key = "<leader>o";
+      action = "<CMD>Neotree float git_status<CR>";
+      options.desc = "Toggle Neotree float git_status";
+    }
+
     {
       key = "<leader>c";
       action = "+context";
