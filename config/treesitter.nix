@@ -3,7 +3,24 @@
     treesitter = {
       enable = true;
       nixGrammars = true;
-      settings.indent.enable = true;
+      nixvimInjections = true;
+      settings = {
+        indent.enable = true;
+        ensure_installed = "all";
+          highlight = {
+            enable = true;
+            additional_vim_regex_highlighting = true;
+        };
+          incremental_selection = {
+            enable = true;
+            keymaps = {
+              init_selection = false;
+              node_decremental = "grm";
+              node_incremental = "grn";
+              scope_incremental = "grc";
+            };
+        };
+      };
     };
     treesitter-context = {
       enable = true;
