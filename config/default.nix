@@ -93,6 +93,13 @@
       options.desc = "Add tests for my code";
     }
 
+    #File 
+
+    {
+      mode = "n";
+      key = "<leader>f";
+      action = "+find/file";
+    }
     {
       # Format file
       key = "<leader>fm";
