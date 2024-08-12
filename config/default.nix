@@ -1,6 +1,6 @@
 {
   imports = [
-    ./barbar.nix
+    ./bufferline.nix
     ./cmp.nix
     ./copilot-chat.nix
     ./git.nix

@@ -1,5 +1,5 @@
 {
-  plugins.barbar = {
+  plugins.bufferline = {
     enable = true;
   };
 }
