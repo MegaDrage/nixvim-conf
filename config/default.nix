@@ -1,6 +1,6 @@
 {
   imports = [
-    ./bufferline.nix
+    ./barbar.nix
     ./cmp.nix
     ./copilot-chat.nix
     ./git.nix
@@ -20,6 +20,7 @@
     ./utils/toggleterm.nix
     ./utils/which-key.nix
     ./utils/wilder.nix
+    ./utils/gitsigns.nix
     ./utils/dashboard.nix
   ];
 
