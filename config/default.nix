@@ -22,6 +22,7 @@
     ./utils/wilder.nix
     ./utils/gitsigns.nix
     ./utils/dashboard.nix
+    ./utils/autotag.nix
   ];
 
   colorschemes.dracula.enable = true;
@@ -39,13 +40,19 @@
       mode = "n";
       key = "<leader>e";
       action = "<CMD>Neotree float focus<CR>";
-      options.desc = "Toggle Neotree float";
+      options.desc = "Open Neotree float";
     }
     {
       mode = "n";
       key = "<leader>o";
       action = "<CMD>Neotree float git_status<CR>";
-      options.desc = "Toggle Neotree float git_status";
+      options.desc = "Open Neotree float git_status";
+    }
+    {
+      mode = "n";
+      key = "<leader>E";
+      action = "<CMD>Neotree left focus<CR>";
+      options.desc = "Open Neotree left focus";
     }
 
     {

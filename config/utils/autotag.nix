@@ -1,0 +1,1 @@
+{ ts-autotag = { enable = true; }; }
