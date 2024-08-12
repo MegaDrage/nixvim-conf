@@ -1,4 +1,6 @@
-{
+let
+  languages = import ./languages.nix;
+in {
   plugins = {
     treesitter = {
       enable = true;
@@ -6,7 +8,7 @@
       nixvimInjections = true;
       settings = {
         indent.enable = true;
-        ensure_installed = [ "c" "cpp" "cmake" "c_sharp" "bash" "css" "html" "javascript" "doxygen" "gitignore" "java" "lua" "nix" "rust" "go" ];
+        ensure_installed = languages;
           highlight = {
             enable = true;
             additional_vim_regex_highlighting = true;
