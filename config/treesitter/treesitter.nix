@@ -6,7 +6,7 @@
       nixvimInjections = true;
       settings = {
         indent.enable = true;
-        ensure_installed = [ "c" ];
+        ensure_installed = [ "c" "cpp" "cmake" "c_sharp" "bash" "css" "html" "javascript" "doxygen" "gitignore" "java" "lua" "nix" "rust" "go" ];
           highlight = {
             enable = true;
             additional_vim_regex_highlighting = true;

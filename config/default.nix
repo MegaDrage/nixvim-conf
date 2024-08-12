@@ -12,7 +12,7 @@
     ./lsp/trouble.nix
     ./nvim-tree.nix
     ./options.nix
-    ./treesitter.nix
+    ./treesitter
     ./utils/auto-pairs.nix
     ./utils/autosave.nix
     ./utils/blankline.nix
