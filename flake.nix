@@ -1,5 +1,5 @@
 {
-  description = "A nixvim configuration";
+  description = "Nixvim configuration";
 
   inputs = {
     nixvim.url = "github:nix-community/nixvim";
@@ -7,7 +7,7 @@
   };
 
   outputs = { self, nixpkgs, nixvim, flake-utils, ... }@inputs:
-    let config = import ./config; # import the module directly
+    let config = import ./config;
     in flake-utils.lib.eachDefaultSystem (system:
       let
         nixvimLib = nixvim.lib.${system};
@@ -24,15 +24,16 @@
         checks = {
           default = nixvimLib.check.mkTestDerivationFromNvim {
             inherit nvim;
-            name = "My nixvim configuration";
+            name = "Nixvim configuration";
           };
         };
 
         packages = {
-          # Lets you run `nix run .` to start nixvim
           default = nvim;
         };
 
-        devShells.default = import ./shell.nix { inherit pkgs; };
+        devShells = {
+	  default = import ./shell.nix { inherit pkgs; };
+	};
       });
 }
