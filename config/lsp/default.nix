@@ -12,6 +12,8 @@
         nixd.enable = true;
         prolog-ls.enable = true;
         ruff-lsp.enable = true;
+        nil-ls.enable = true;
+        marksman.enable = true;
       };
       keymaps.lspBuf = {
         "gd" = "definition";

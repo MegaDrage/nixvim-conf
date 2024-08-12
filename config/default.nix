@@ -23,6 +23,11 @@
     ./utils/gitsigns.nix
     ./utils/dashboard.nix
     ./utils/autotag.nix
+    ./utils/commentary.nix
+    ./utils/lazygit.nix
+    ./utils/markdown-preview.nix
+    ./utils/noice.nix
+    ./utils/todo-comments.nix
   ];
 
   colorschemes.dracula.enable = true;

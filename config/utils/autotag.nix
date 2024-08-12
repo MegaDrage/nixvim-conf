@@ -1,1 +1,1 @@
-{ ts-autotag = { enable = true; }; }
+{ plugins.ts-autotag = { enable = true; }; }
