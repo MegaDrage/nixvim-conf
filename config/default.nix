@@ -11,7 +11,7 @@
     ./lsp/none-ls.nix
     ./lsp/trouble.nix
     ./neo-tree.nix
-    ./options.nix
+    #./options.nix
     ./treesitter
     ./utils/auto-pairs.nix
     ./utils/autosave.nix
@@ -38,8 +38,25 @@
     autocmd BufRead,BufNewFile *.pl set filetype=prolog
   '';
 
+  extraConfigLua = ''
+    require("telescope").load_extension("lazygit")
+  '';
+
   globals.mapleader = " ";
   keymaps = [
+    # Lazygit
+    {
+      mode = "n";
+      key = "<leader>gg";
+      action = "<cmd>LazyGit<CR>";
+      options = { desc = "LazyGit (root dir)"; };
+    }
+
+    {
+      action = "<cmd>Commentary<CR>";
+      key = "<leader>/";
+    }
+
     # Neotree
     {
       mode = "n";
@@ -107,11 +124,11 @@
 
     #File 
 
-    {
-      mode = "n";
-      key = "<leader>f";
-      action = "+find/file";
-    }
+    #{
+    #  mode = "n";
+    #  key = "<leader>f";
+    #  action = "+find/file";
+    #}
     {
       # Format file
       key = "<leader>fm";
@@ -161,37 +178,6 @@
       options.desc = "Gitsigns reset current buffer";
     }
 
-    # Tabs
-    {
-      mode = "n";
-      key = "<leader>t";
-      action = "+tab";
-    }
-    {
-      mode = "n";
-      key = "<leader>tn";
-      action = "<CMD>tabnew<CR>";
-      options.desc = "Create new tab";
-    }
-    {
-      mode = "n";
-      key = "<leader>td";
-      action = "<CMD>tabclose<CR>";
-      options.desc = "Close tab";
-    }
-    {
-      mode = "n";
-      key = "<leader>ts";
-      action = "<CMD>tabnext<CR>";
-      options.desc = "Go to the sub-sequent tab";
-    }
-    {
-      mode = "n";
-      key = "<leader>tp";
-      action = "<CMD>tabprevious<CR>";
-      options.desc = "Go to the previous tab";
-    }
-
     # Terminal
     {
       # Escape terminal mode using ESC
@@ -225,6 +211,42 @@
       key = "<leader>rs";
       action = "<CMD>RustStartStandaloneServerForBuffer<CR>";
       options.desc = "Start standalone rust-analyzer";
+    }
+    # Bufferline bindings
+
+    {
+      mode = "n";
+      key = "<Tab>";
+      action = "<cmd>BufferLineCycleNext<cr>";
+      options = { desc = "Cycle to next buffer"; };
+    }
+
+    {
+      mode = "n";
+      key = "<S-Tab>";
+      action = "<cmd>BufferLineCyclePrev<cr>";
+      options = { desc = "Cycle to previous buffer"; };
+    }
+
+    {
+      mode = "n";
+      key = "<S-l>";
+      action = "<cmd>BufferLineCycleNext<cr>";
+      options = { desc = "Cycle to next buffer"; };
+    }
+
+    {
+      mode = "n";
+      key = "<S-h>";
+      action = "<cmd>BufferLineCyclePrev<cr>";
+      options = { desc = "Cycle to previous buffer"; };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>bd";
+      action = "<cmd>bdelete<cr>";
+      options = { desc = "Delete buffer"; };
     }
   ];
 }

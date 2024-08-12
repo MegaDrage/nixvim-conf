@@ -6,20 +6,24 @@
 
     number = true;
     relativenumber = true;
-    splitbelow = true;
-    splitright = true;
-    scrolloff = 4;
+    signcolumn = "yes";
+
+    scrolloff = 5;
 
     autoindent = true;
+
     clipboard = "unnamedplus";
+
     expandtab = true;
-    shiftwidth = 2;
+    shiftwidth = 4;
     smartindent = true;
-    tabstop = 2;
+    smarttab = true;
+    tabstop = 4;
 
     ignorecase = true;
     incsearch = true;
     smartcase = true;
+    ruler = true;
     wildmode = "list:longest";
 
     swapfile = false;
