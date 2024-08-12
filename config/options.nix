@@ -5,7 +5,6 @@
     updatetime = 100; # Faster completion
 
     number = true;
-    relativenumber = true;
     splitbelow = true;
     splitright = true;
     scrolloff = 4;
