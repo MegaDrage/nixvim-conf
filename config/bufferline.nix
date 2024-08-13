@@ -6,7 +6,6 @@
       style = "icon";
       icon = "  ";
     };
-    separatorStyle = "thin";
     diagnostics = "nvim_lsp";
     offsets = [{
       fileType = "neo-tree";

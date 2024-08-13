@@ -1,1 +1,1 @@
-{ plugins.lightline = { enable = true; }; }
+{ plugins.lualine = { enable = true; }; }
