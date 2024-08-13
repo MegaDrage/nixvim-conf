@@ -2,7 +2,7 @@
   imports = [
     ./bufferline.nix
     ./cmp.nix
-	#./copilot-chat.nix
+    #./copilot-chat.nix
     ./git.nix
     ./lightline.nix
     ./lsp/default.nix
@@ -29,17 +29,15 @@
     ./utils/todo-comments.nix
   ];
 
-    colorschemes.dracula.enable = true;
+  colorschemes.dracula.enable = true;
 
-    diagnostics = { virtual_lines.only_current_line = true; };
+  diagnostics = { virtual_lines.only_current_line = true; };
 
-    extraConfigVim = ''
-        autocmd BufRead,BufNewFile *.pl set filetype=prolog
-    '';
+  extraConfigVim = ''
+    autocmd BufRead,BufNewFile *.pl set filetype=prolog
+  '';
 
-	extraConfigLua = ''
-  	  require("telescope").load_extension("lazygit")
-  	'';
+  extraConfigLua = "  require(\"telescope\").load_extension(\"lazygit\")\n";
 
   globals.mapleader = " ";
   keymaps = [
@@ -76,10 +74,10 @@
       options.desc = "Open Neotree left focus";
     }
 
-    {
-      key = "<leader>c";
-      options.desc = "+context";
-    }
+    # {
+    # key = "<leader>c";
+    # options.desc = "Context";
+    # }
     {
       key = "<leader>co";
       action = "<CMD>TSContextToggle<CR>";
@@ -131,16 +129,16 @@
     }
 
     # Git    
-    {
-      mode = "n";
-      key = "<leader>g";
-      options.desc = "+git";
-    }
-    {
-      mode = "n";
-      key = "<leader>gt";
-      options.desc = "+toggles";
-    }
+    # {
+    # mode = "n";
+    # key = "<leader>g";
+    # options.desc = "Git";
+    # }
+    # {
+    # mode = "n";
+    # key = "<leader>gt";
+    # options.desc = "Toggles";
+    # }
     {
       key = "<leader>gtb";
       action = "<CMD>Gitsigns toggle_current_line_blame<CR>";
@@ -156,11 +154,11 @@
       action = "<CMD>Gitsigns diffthis<CR>";
       options.desc = "Gitsigns diff this buffer";
     }
-    {
-      mode = "n";
-      key = "<leader>gr";
-      options.desc = "+resets";
-    }
+    # {
+    # mode = "n";
+    # key = "<leader>gr";
+    # options.desc = "Resets";
+    # }
     {
       key = "<leader>grh";
       action = "<CMD>Gitsigns reset_hunk<CR>";
@@ -182,11 +180,11 @@
     }
 
     # Trouble 
-    {
-      mode = "n";
-      key = "<leader>d";
-      options.desc = "+diagnostics/debug";
-    }
+    # {
+    # mode = "n";
+    # key = "<leader>d";
+    # options.desc = "+diagnostics/debug";
+    # }
     {
       key = "<leader>dt";
       action = "<CMD>TroubleToggle<CR>";
@@ -195,16 +193,16 @@
 
     # Rust
     # {
-      # mode = "n";
-      # key = "<leader>r";
-      # action = "+rust";
+    # mode = "n";
+    # key = "<leader>r";
+    # action = "+rust";
     # }
     # {
-      # Start standalone rust-analyzer (fixes issues when opening files from nvim tree)
-      # mode = "n";
-      # key = "<leader>rs";
-      # action = "<CMD>RustStartStandaloneServerForBuffer<CR>";
-      # options.desc = "Start standalone rust-analyzer";
+    # Start standalone rust-analyzer (fixes issues when opening files from nvim tree)
+    # mode = "n";
+    # key = "<leader>rs";
+    # action = "<CMD>RustStartStandaloneServerForBuffer<CR>";
+    # options.desc = "Start standalone rust-analyzer";
     # }
 
     # Bufferline bindings
@@ -226,7 +224,7 @@
       key = "<leader>x";
       action = "<cmd>BufferLinePickClose<cr>";
       options = { desc = "Delete buffer"; };
-    }    
+    }
     {
       mode = "n";
       key = "<leader>s";
@@ -236,19 +234,19 @@
 
     # ToggleTerm
     {
-        mode = "n";
-        key = "<leader>tf";
-        action = "<cmd>ToggleTerm direction=float<CR>";
-    }    
-    {
-        mode = "n";
-        key = "<leader>th";
-        action = "<cmd>ToggleTerm direction=horizontal<CR>";
+      mode = "n";
+      key = "<leader>tf";
+      action = "<cmd>ToggleTerm direction=float<cr>";
     }
     {
-        mode = "n";
-        key = "<leader>tv";
-        action = "<cmd>ToggleTerm direction=vertical size=40<CR>";
+      mode = "n";
+      key = "<leader>th";
+      action = "<cmd>ToggleTerm direction=horizontal<cr>";
+    }
+    {
+      mode = "n";
+      key = "<leader>tv";
+      action = "<cmd>ToggleTerm direction=vertical size=40<cr>";
     }
   ];
 }
