@@ -49,9 +49,14 @@
       options.desc = "LazyGit (root dir)";
     }
 
+    # Commentary
     {
       action = "<cmd>Commentary<CR>";
-      key = "<leader>/";
+      key = "<leader>ml";
+    }
+    {
+      action = "<cmd>'<,'>Commentary<CR>";
+      key = "<leader>mr";
     }
 
     # Neotree
@@ -247,6 +252,11 @@
       mode = "n";
       key = "<leader>tv";
       action = "<cmd>ToggleTerm direction=vertical size=40<cr>";
+    }
+    {
+      mode = "n";
+      key = "<leader>/";
+      action = "<cmd>noh<cr>";
     }
   ];
 }
