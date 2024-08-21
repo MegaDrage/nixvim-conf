@@ -23,11 +23,11 @@
         "gi" = "implementation";
         "K" = "hover";
       };
-      preConfig = ''
+      postConfig = ''
         vim.api.nvim_create_autocmd("BufWritePre", {
           pattern = "*", 
           callback = function()
-            vim.lsp.buf.format({ async = true })  -- Асинхронное форматирование
+            vim.lsp.buf.format()  -- Асинхронное форматирование
           end,
         })
       '';
