@@ -5,28 +5,13 @@
     #./copilot-chat.nix
     ./git.nix
     ./lightline.nix
-    ./lsp/default.nix
-    ./lsp/fidget.nix
-    ./lsp/ionide.nix
-    ./lsp/none-ls.nix
-    ./lsp/trouble.nix
+    ./lsp
     ./neo-tree.nix
     ./options.nix
     ./treesitter
-    ./utils/auto-pairs.nix
-    ./utils/autosave.nix
-    ./utils/blankline.nix
     ./telescope
-    ./utils/toggleterm.nix
-    ./utils/which-key.nix
-    ./utils/wilder.nix
-    ./utils/gitsigns.nix
-    ./utils/dashboard.nix
-    ./utils/autotag.nix
-    ./utils/commentary.nix
-    ./utils/lazygit.nix
-    ./utils/markdown-preview.nix
-    ./utils/todo-comments.nix
+    ./keymaps
+    ./utils
   ];
 
   colorschemes.dracula.enable = true;
@@ -59,30 +44,6 @@
       key = "<leader>mr";
     }
 
-    # Neotree
-    {
-      mode = "n";
-      key = "<leader>e";
-      action = "<CMD>Neotree float focus<CR>";
-      options.desc = "Open Neotree float";
-    }
-    {
-      mode = "n";
-      key = "<leader>o";
-      action = "<CMD>Neotree float git_status<CR>";
-      options.desc = "Open Neotree float git_status";
-    }
-    {
-      mode = "n";
-      key = "<leader>E";
-      action = "<CMD>Neotree left focus<CR>";
-      options.desc = "Open Neotree left focus";
-    }
-
-    # {
-    # key = "<leader>c";
-    # options.desc = "Context";
-    # }
     {
       key = "<leader>co";
       action = "<CMD>TSContextToggle<CR>";
@@ -133,17 +94,6 @@
       options.desc = "Format the current buffer";
     }
 
-    # Git    
-    # {
-    # mode = "n";
-    # key = "<leader>g";
-    # options.desc = "Git";
-    # }
-    # {
-    # mode = "n";
-    # key = "<leader>gt";
-    # options.desc = "Toggles";
-    # }
     {
       key = "<leader>gtb";
       action = "<CMD>Gitsigns toggle_current_line_blame<CR>";
@@ -159,11 +109,7 @@
       action = "<CMD>Gitsigns diffthis<CR>";
       options.desc = "Gitsigns diff this buffer";
     }
-    # {
-    # mode = "n";
-    # key = "<leader>gr";
-    # options.desc = "Resets";
-    # }
+
     {
       key = "<leader>grh";
       action = "<CMD>Gitsigns reset_hunk<CR>";
@@ -184,31 +130,11 @@
       options.desc = "Escape terminal mode";
     }
 
-    # Trouble 
-    # {
-    # mode = "n";
-    # key = "<leader>d";
-    # options.desc = "+diagnostics/debug";
-    # }
     {
       key = "<leader>dt";
       action = "<CMD>TroubleToggle<CR>";
       options.desc = "Toggle trouble";
     }
-
-    # Rust
-    # {
-    # mode = "n";
-    # key = "<leader>r";
-    # action = "+rust";
-    # }
-    # {
-    # Start standalone rust-analyzer (fixes issues when opening files from nvim tree)
-    # mode = "n";
-    # key = "<leader>rs";
-    # action = "<CMD>RustStartStandaloneServerForBuffer<CR>";
-    # options.desc = "Start standalone rust-analyzer";
-    # }
 
     # Bufferline bindings
     {
@@ -258,5 +184,7 @@
       key = "<leader>/";
       action = "<cmd>noh<cr>";
     }
+    # Remove arrows
+
   ];
 }

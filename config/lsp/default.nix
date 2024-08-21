@@ -1,4 +1,10 @@
 {
+  imports = [
+    ./fidget.nix
+    ./ionide.nix
+    ./none-ls.nix
+    ./trouble.nix
+  ];
   plugins = {
     lsp = {
       enable = true;

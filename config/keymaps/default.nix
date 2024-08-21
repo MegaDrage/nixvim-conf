@@ -1,0 +1,5 @@
+{
+    imports = [
+        ./Neotree-keymaps.nix
+    ];
+}
