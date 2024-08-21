@@ -1,5 +1,6 @@
 {
     imports = [
-        ./Neotree-keymaps.nix
+        ./neotree.nix
+        ./bufferline.nix
     ];
 }
