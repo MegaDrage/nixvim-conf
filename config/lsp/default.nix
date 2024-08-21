@@ -23,10 +23,9 @@
         "gi" = "implementation";
         "K" = "hover";
       };
-      postConfig = ''
-        -- Создаем автокоманду для автоформатирования при сохранении
+      preConfig = ''
         vim.api.nvim_create_autocmd("BufWritePre", {
-          pattern = "*",  -- Можно указать конкретные типы файлов, например, "*.lua", "*.js" и т.д.
+          pattern = "*", 
           callback = function()
             vim.lsp.buf.format({ async = true })  -- Асинхронное форматирование
           end,
