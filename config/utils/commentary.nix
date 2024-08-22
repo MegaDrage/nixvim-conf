@@ -1,1 +1,1 @@
-{ plugins.commentary = { enable = true; }; }
+{ plugins.comment = { enable = true; }; }

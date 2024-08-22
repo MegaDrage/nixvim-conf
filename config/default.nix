@@ -34,16 +34,6 @@
       options.desc = "LazyGit (root dir)";
     }
 
-    # Commentary
-    {
-      action = "<cmd>Commentary<CR>";
-      key = "<leader>ml";
-    }
-    {
-      action = "<cmd>'<,'>Commentary<CR>";
-      key = "<leader>mr";
-    }
-
     {
       key = "<leader>co";
       action = "<CMD>TSContextToggle<CR>";
