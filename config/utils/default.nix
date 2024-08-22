@@ -13,5 +13,6 @@
     ./toggleterm.nix
     ./which-key.nix
     ./wilder.nix
+    ./undotree.nix
   ];
 }

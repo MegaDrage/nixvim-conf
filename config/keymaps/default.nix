@@ -1,6 +1,1 @@
-{
-    imports = [
-        ./neotree.nix
-        ./bufferline.nix
-    ];
-}
+{ imports = [ ./neotree.nix ./bufferline.nix ./undotree.nix ]; }
