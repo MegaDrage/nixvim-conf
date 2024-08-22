@@ -25,5 +25,8 @@ pkgs.mkShell {
 
     # Tools
     ripgrep
+
+    # C
+    gcc
   ];
 }
