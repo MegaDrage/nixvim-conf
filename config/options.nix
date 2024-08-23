@@ -2,7 +2,7 @@
 
 {
   config.opts = {
-    updatetime = 100; 
+    updatetime = 100;
 
     number = true;
     relativenumber = true;
@@ -27,7 +27,7 @@
     wildmode = "list:longest";
 
     swapfile = false;
-    undofile = true; 
+    undofile = true;
 
     #Mouse
     mouse = "a";

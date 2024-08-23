@@ -1,6 +1,7 @@
 let
   languages = import ./languages.nix;
-in {
+in
+{
   plugins = {
     treesitter = {
       enable = true;
@@ -9,18 +10,18 @@ in {
       settings = {
         indent.enable = true;
         ensure_installed = languages;
-          highlight = {
-            enable = true;
-            additional_vim_regex_highlighting = true;
+        highlight = {
+          enable = true;
+          additional_vim_regex_highlighting = true;
         };
-          incremental_selection = {
-            enable = true;
-            keymaps = {
-              init_selection = false;
-              node_decremental = "grm";
-              node_incremental = "grn";
-              scope_incremental = "grc";
-            };
+        incremental_selection = {
+          enable = true;
+          keymaps = {
+            init_selection = false;
+            node_decremental = "grm";
+            node_incremental = "grn";
+            scope_incremental = "grc";
+          };
         };
       };
     };

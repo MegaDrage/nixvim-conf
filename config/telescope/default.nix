@@ -9,7 +9,7 @@
       "*" = "grep_string";
       "<leader>gb" = "git_branches";
       "<leader>gc" = "git_commits";
-      "<leader>gs" =  "git_status";
+      "<leader>gs" = "git_status";
     };
     extensions.fzf-native = { enable = true; };
   };
