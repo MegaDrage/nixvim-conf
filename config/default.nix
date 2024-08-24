@@ -68,13 +68,13 @@
     }
 
     # Terminal
-    # {
-    #   # Escape terminal mode using ESC
-    #   mode = "t";
-    #   key = "<esc>";
-    #   action = "<C-\\><C-n>";
-    #   options.desc = "Escape terminal mode";
-    # }
+    {
+      # Escape terminal mode using ESC
+      mode = "t";
+      key = "<esc>";
+      action = "<C-\\><C-n>";
+      options.desc = "Escape terminal mode";
+    }
 
     {
       key = "<leader>dt";
