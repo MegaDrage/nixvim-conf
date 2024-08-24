@@ -1,6 +1,7 @@
 {
   imports = [
     ./auto-pairs.nix
+    ./colorizer.nix
     ./autosave.nix
     ./autotag.nix
     ./blankline.nix
