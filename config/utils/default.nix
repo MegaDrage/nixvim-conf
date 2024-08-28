@@ -1,5 +1,6 @@
 {
   imports = [
+    ./wakatime.nix
     ./auto-pairs.nix
     ./colorizer.nix
     ./autosave.nix
