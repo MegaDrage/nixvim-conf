@@ -1,7 +1,7 @@
 {
   imports = [
     ./wakatime.nix
-    ./hardtime.nix
+    # ./hardtime.nix
     ./auto-pairs.nix
     ./colorizer.nix
     ./autosave.nix

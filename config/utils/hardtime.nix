@@ -1,7 +1,6 @@
 {
   plugins.hardtime = {
     enable = true;
-    enabled = true;
     disableMouse = true;
     disabledFiletypes = [ "Oil" ];
     hint = true;
