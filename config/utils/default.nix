@@ -1,6 +1,7 @@
 {
   imports = [
     ./wakatime.nix
+    ./slime.nix
     # ./hardtime.nix
     ./auto-pairs.nix
     ./colorizer.nix
