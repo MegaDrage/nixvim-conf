@@ -1,5 +1,5 @@
 {
-    plugins.slime = {
-        enable = true;
-    };
+  plugins.slime = {
+    enable = true;
+  };
 }
