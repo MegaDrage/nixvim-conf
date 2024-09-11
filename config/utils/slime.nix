@@ -1,5 +1,5 @@
 {
-    plugins.vim-slime = {
-        enable = true;
-    };
+  plugins.vim-slime = {
+    enable = true;
+  };
 }
