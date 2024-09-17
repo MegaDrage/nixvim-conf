@@ -5,6 +5,7 @@
       enable = true;
       servers = {
         bashls.enable = true;
+        jdt-language-server.enable = true;
         clangd.enable = true;
         elixirls.enable = true;
         gleam.enable = true;
