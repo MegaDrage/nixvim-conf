@@ -12,10 +12,6 @@
         gopls.enable = true;
         kotlin-language-server.enable = true;
         nixd.enable = true;
-        prolog-ls = {
-          enable = true;
-          package = pkgs.prolog-ls;
-        };
         ruff-lsp.enable = true;
         nil-ls.enable = true;
         marksman.enable = true;
