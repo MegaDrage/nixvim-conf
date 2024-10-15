@@ -2,6 +2,7 @@
   imports = [
     ./wakatime.nix
     ./slime.nix
+    ./devicons.nix
     # ./hardtime.nix
     ./auto-pairs.nix
     ./colorizer.nix
