@@ -23,8 +23,8 @@
         terminal_colors = true;
         extensions = { telescope = true; notify = true; };
         # theme = {
-          # variant = "default";
-          # saturation = 1;
+        # variant = "default";
+        # saturation = 1;
         # };
       };
     };
