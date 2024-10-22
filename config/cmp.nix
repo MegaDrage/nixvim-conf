@@ -13,6 +13,20 @@
 
     cmp-cmdline = { enable = true; };
 
+    # cmp-ai = {
+    #   enable = true;
+    #   settings = {
+    #     ignored_file_types = { lua = true; };
+    #     max_lines = 1000;
+    #     notify = true;
+    #     notify_callback = ''
+    #       function(msg)
+    #         vim.notify(msg)
+    #       end
+    #     '';
+    #   };
+    # };
+
     cmp = {
       enable = true;
 

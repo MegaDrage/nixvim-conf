@@ -3,19 +3,19 @@
     # Neotree
     {
       mode = "n";
-      key = "<leader>e";
+      key = "<leader>nf";
       action = "<CMD>Neotree float focus<CR>";
       options.desc = "Open Neotree float";
     }
     {
       mode = "n";
-      key = "<leader>o";
+      key = "<leader>ng";
       action = "<CMD>Neotree float git_status<CR>";
       options.desc = "Open Neotree float git_status";
     }
     {
       mode = "n";
-      key = "<leader>E";
+      key = "<leader>nl";
       action = "<CMD>Neotree left focus<CR>";
       options.desc = "Open Neotree left focus";
     }

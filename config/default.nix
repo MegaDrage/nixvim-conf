@@ -1,8 +1,7 @@
-{ config, lib, ... }: {
+{
   imports = [
     ./bufferline.nix
     ./cmp.nix
-    ./git.nix
     ./lightline.nix
     ./lsp
     ./neo-tree.nix
@@ -13,32 +12,50 @@
     ./utils
   ];
 
-  colorschemes.base16 = {
-    enable = true;
-    # colorscheme = "onedark";
-    colorscheme = {
-      base00 = "#${config.stylix.generated.palette.base00}";
-      base01 = "#${config.stylix.generated.palette.base01}";
-      base02 = "#${config.stylix.generated.palette.base02}";
-      base03 = "#${config.stylix.generated.palette.base03}";
-      base04 = "#${config.stylix.generated.palette.base04}";
-      base05 = "#${config.stylix.generated.palette.base05}";
-      base06 = "#${config.stylix.generated.palette.base06}";
-      base07 = "#${config.stylix.generated.palette.base07}";
-      base08 = "#${config.stylix.generated.palette.base08}";
-      base09 = "#${config.stylix.generated.palette.base09}";
-      base0A = "#${config.stylix.generated.palette.base0A}";
-      base0B = "#${config.stylix.generated.palette.base0B}";
-      base0C = "#${config.stylix.generated.palette.base0C}";
-      base0D = "#${config.stylix.generated.palette.base0D}";
-      base0E = "#${config.stylix.generated.palette.base0E}";
-      base0F = "#${config.stylix.generated.palette.base0F}";
-    };
-    settings = {
-      telescope = true;
-      telescope_borders = true;
+  colorschemes = {
+    cyberdream = {
+      enable = true;
+      settings = {
+        transparent = true;
+        hide_fillchars = true;
+        borderless_telescope = true;
+        italic_comments = true;
+        terminal_colors = true;
+        extensions = { telescope = true; notify = true; };
+        # theme = {
+          # variant = "default";
+          # saturation = 1;
+        # };
+      };
     };
   };
+
+  # colorschemes.base16 = {
+  #   enable = true;
+  #   colorscheme = "dracula";
+  #   # colorscheme = {
+  #   #   base00 = "#${config.stylix.generated.palette.base00}";
+  #   #   base01 = "#${config.stylix.generated.palette.base01}";
+  #   #   base02 = "#${config.stylix.generated.palette.base02}";
+  #   #   base03 = "#${config.stylix.generated.palette.base03}";
+  #   #   base04 = "#${config.stylix.generated.palette.base04}";
+  #   #   base05 = "#${config.stylix.generated.palette.base05}";
+  #   #   base06 = "#${config.stylix.generated.palette.base06}";
+  #   #   base07 = "#${config.stylix.generated.palette.base07}";
+  #   #   base08 = "#${config.stylix.generated.palette.base08}";
+  #   #   base09 = "#${config.stylix.generated.palette.base09}";
+  #   #   base0A = "#${config.stylix.generated.palette.base0A}";
+  #   #   base0B = "#${config.stylix.generated.palette.base0B}";
+  #   #   base0C = "#${config.stylix.generated.palette.base0C}";
+  #   #   base0D = "#${config.stylix.generated.palette.base0D}";
+  #   #   base0E = "#${config.stylix.generated.palette.base0E}";
+  #   #   base0F = "#${config.stylix.generated.palette.base0F}";
+  #   # };
+  #   settings = {
+  #     telescope = true;
+  #     telescope_borders = true;
+  #   };
+  # };
 
   diagnostics = { virtual_lines.only_current_line = true; };
 
@@ -48,7 +65,12 @@
 
   extraConfigLua = "  require(\"telescope\").load_extension(\"lazygit\")\n";
 
-  globals.mapleader = " ";
+  globals = {
+    mapleader = " ";
+    maplocalleader = " ";
+    have_nerd_font = true;
+  };
+
   keymaps = [
     # Lazygit
     {

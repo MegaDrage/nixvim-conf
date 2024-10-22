@@ -1,37 +1,57 @@
 { lib, pkgs, ... }:
 
 {
-  config.opts = {
-    updatetime = 100;
+  config = {
+    clipboard = {
+      providers = {
+        wl-copy.enable = true; # For Wayland
+        xsel.enable = true; # For X11
+      };
+      register = "unnamedplus";
+    };
 
-    number = true;
-    relativenumber = true;
-    signcolumn = "yes";
+    opts = {
+      updatetime = 250;
+      timeoutlen = 300;
 
-    scrolloff = 5;
+      number = true;
 
-    autoindent = true;
+      relativenumber = true;
 
-    clipboard = "unnamedplus";
+      signcolumn = "yes";
+      showmode = false;
+      breakindent = false;
 
-    expandtab = true;
-    shiftwidth = 4;
-    smartindent = true;
-    smarttab = true;
-    tabstop = 4;
+      scrolloff = 10;
 
-    ignorecase = true;
-    incsearch = true;
-    smartcase = true;
-    ruler = true;
-    wildmode = "list:longest";
+      autoindent = true;
 
-    swapfile = false;
-    undofile = true;
+      expandtab = true;
+      shiftwidth = 4;
+      smartindent = true;
+      smarttab = true;
+      tabstop = 4;
 
-    #Mouse
-    mouse = "a";
-    mousefocus = true;
-    termguicolors = lib.mkForce pkgs.stdenv.isLinux;
+      ignorecase = true;
+      incsearch = true;
+      smartcase = true;
+      ruler = true;
+      wildmode = "list:longest";
+
+      swapfile = false;
+      undofile = true;
+
+      #Mouse
+      mouse = "a";
+      mousefocus = true;
+      termguicolors = lib.mkForce pkgs.stdenv.isLinux;
+
+      splitright = true;
+      splitbelow = true;
+
+      inccommand = "split";
+
+      cursorline = true;
+    };
   };
 }
