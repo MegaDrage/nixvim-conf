@@ -17,8 +17,7 @@
           inherit pkgs;
           module = config;
         };
-      in
-      {
+      in {
         formatter = nixpkgs.legacyPackages.${system}.nixpkgs-fmt;
 
         checks = {
@@ -28,12 +27,8 @@
           };
         };
 
-        packages = {
-          default = nvim;
-        };
+        packages = { default = nvim; };
 
-        devShells = {
-          default = import ./shell.nix { inherit pkgs; };
-        };
+        devShells = { default = import ./shell.nix { inherit pkgs; }; };
       });
 }
