@@ -15,7 +15,6 @@
       timeoutlen = 300;
 
       number = true;
-
       relativenumber = true;
 
       signcolumn = "yes";
@@ -36,7 +35,8 @@
       incsearch = true;
       smartcase = true;
       ruler = true;
-      wildmode = "list:longest";
+      wildmenu = true;
+      wildmode = "list:full";
 
       swapfile = false;
       undofile = true;
@@ -45,6 +45,7 @@
       mouse = "a";
       mousefocus = true;
       termguicolors = lib.mkForce pkgs.stdenv.isLinux;
+      showcmd = false;
 
       splitright = true;
       splitbelow = true;

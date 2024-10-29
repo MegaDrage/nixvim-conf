@@ -12,23 +12,24 @@
     ./utils
   ];
 
-  colorschemes = {
-    cyberdream = {
-      enable = true;
-      settings = {
-        transparent = true;
-        hide_fillchars = true;
-        borderless_telescope = true;
-        italic_comments = true;
-        terminal_colors = true;
-        extensions = { telescope = true; notify = true; };
-        # theme = {
-        # variant = "default";
-        # saturation = 1;
-        # };
-      };
-    };
-  };
+  colorschemes.dracula.enable = true;
+  # colorschemes = {
+  #   cyberdream = {
+  #     enable = true;
+  #     settings = {
+  #       transparent = true;
+  #       hide_fillchars = true;
+  #       borderless_telescope = true;
+  #       italic_comments = true;
+  #       terminal_colors = true;
+  #       extensions = { telescope = true; notify = true; };
+  #       # theme = {
+  #       # variant = "default";
+  #       # saturation = 1;
+  #       # };
+  #     };
+  #   };
+  # };
 
   # colorschemes.base16 = {
   #   enable = true;
