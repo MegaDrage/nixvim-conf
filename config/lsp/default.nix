@@ -13,7 +13,7 @@
         gopls.enable = true;
         kotlin_language_server.enable = true;
         nixd.enable = true;
-        ruff_lsp.enable = true;
+        ruff.enable = true;
         nil_ls.enable = true;
         marksman.enable = true;
       };
