@@ -4,6 +4,7 @@
     lsp = {
       enable = true;
       servers = {
+        yamlls = { enable = true; autostart = true; };
         lua_ls.enable = true;
         bashls.enable = true;
         jdtls.enable = true;
