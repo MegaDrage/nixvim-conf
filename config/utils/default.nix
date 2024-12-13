@@ -1,6 +1,7 @@
 {
   imports = [
     ./wakatime.nix
+    ./gitlab.nix
     # ./notify.nix
     ./devicons.nix
     ./auto-pairs.nix
