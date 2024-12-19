@@ -5,6 +5,7 @@
       enable = true;
       servers = {
         yamlls = { enable = true; autostart = true; };
+        efm.enable = true;
         lua_ls.enable = true;
         bashls.enable = true;
         jdtls.enable = true;
