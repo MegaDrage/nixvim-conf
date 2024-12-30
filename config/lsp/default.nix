@@ -11,7 +11,6 @@
         jdtls.enable = true;
         clangd.enable = true;
         elixirls.enable = true;
-        sqlls.enable = true;
         gleam.enable = true;
         gopls.enable = true;
         kotlin_language_server.enable = true;
