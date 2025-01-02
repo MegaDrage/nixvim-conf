@@ -7,11 +7,19 @@ in {
       autoLoad = true;
       nixGrammars = true;
       nixvimInjections = true;
-      grammarPackages = with pkgs.vimPlugins.nvim-treesitter-parsers; [
+      grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
         c
         cpp
         bash
         lua
+        vim
+        vimdoc
+        xml 
+        yaml
+        toml
+        regex
+        json
+        markdown
         nix
       ];
       settings = {
