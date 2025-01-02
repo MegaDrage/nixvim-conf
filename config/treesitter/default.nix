@@ -22,12 +22,12 @@ in {
         };
         incremental_selection = {
           enable = true;
-            keymaps = {
-              init_selection = "<cr>";
-              node_decremental = "grm";
-              node_incremental = "grn";
-              scope_incremental = "grc";
-            };
+          keymaps = {
+            init_selection = "<cr>";
+            node_decremental = "grm";
+            node_incremental = "grn";
+            scope_incremental = "grc";
+          };
         };
       };
     };
