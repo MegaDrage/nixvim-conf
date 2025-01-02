@@ -14,7 +14,7 @@ in {
         lua
         vim
         vimdoc
-        xml 
+        xml
         yaml
         toml
         regex
