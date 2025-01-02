@@ -7,7 +7,7 @@
         wl-copy.enable = true; # For Wayland
         xsel.enable = true; # For X11
       };
-      register = "unnamedplus";
+      # register = "unnamedplus";
     };
 
     opts = {

@@ -7,7 +7,13 @@ in {
       autoLoad = true;
       nixGrammars = true;
       nixvimInjections = true;
-      grammarPackages = pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars;
+      grammarPackages = with pkgs.vimPlugins.nvim-treesitter-parsers; [
+        c
+        cpp
+        bash
+        lua
+        nix
+      ];
       settings = {
         indent.enable = true;
         highlight = {
@@ -16,12 +22,12 @@ in {
         };
         incremental_selection = {
           enable = true;
-          keymaps = {
-            init_selection = false;
-            node_decremental = "grm";
-            node_incremental = "grn";
-            scope_incremental = "grc";
-          };
+            keymaps = {
+              init_selection = "<cr>";
+              node_decremental = "grm";
+              node_incremental = "grn";
+              scope_incremental = "grc";
+            };
         };
       };
     };
