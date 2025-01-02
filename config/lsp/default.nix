@@ -9,7 +9,7 @@
         lua_ls.enable = true;
         bashls.enable = true;
         jdtls.enable = true;
-        clangd.enable = true;
+        ccls.enable = true;
         elixirls.enable = true;
         gleam.enable = true;
         gopls.enable = true;

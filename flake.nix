@@ -29,7 +29,5 @@
         };
 
         packages = { default = nvim; };
-
-        devShells = { default = import ./shell.nix { inherit pkgs; }; };
       });
 }

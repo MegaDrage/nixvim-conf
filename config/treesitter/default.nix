@@ -1,18 +1,18 @@
-let
-  languages = import ./languages.nix;
-in
-{
+{ pkgs, ... }:
+let languages = import ./languages.nix;
+in {
   plugins = {
     treesitter = {
       enable = true;
+      autoLoad = true;
       nixGrammars = true;
       nixvimInjections = true;
+      grammarPackages = pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars;
       settings = {
         indent.enable = true;
-        ensure_installed = languages;
         highlight = {
           enable = true;
-          additional_vim_regex_highlighting = true;
+          # additional_vim_regex_highlighting = true;
         };
         incremental_selection = {
           enable = true;
@@ -27,8 +27,9 @@ in
     };
     treesitter-context = {
       enable = true;
-      settings = { max_lines = 2; };
+      autoLoad = true;
+      settings = { line_numbers = true; };
     };
-    # rainbow-delimiters.enable = true;
+    rainbow-delimiters.enable = true;
   };
 }
