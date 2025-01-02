@@ -29,6 +29,6 @@ in
       enable = true;
       settings = { max_lines = 2; };
     };
-    rainbow-delimiters.enable = true;
+    # rainbow-delimiters.enable = true;
   };
 }
